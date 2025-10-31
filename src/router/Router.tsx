@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {lazy, Suspense} from "react";
-import Loader from "../components/Loader.tsx";
+import Loader from "../components/ui/Loader.tsx";
 
 // Lazy Imports
 const HomePage = lazy(()=> import( "../pages/dashboard/Home.tsx"));
