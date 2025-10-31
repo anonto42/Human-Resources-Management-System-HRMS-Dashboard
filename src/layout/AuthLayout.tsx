@@ -1,6 +1,6 @@
-import type {ReactNode} from "react";
+import type { ReactNode} from "react";
 
-export default function AuthLayout ({ children }: { children: ReactNode }) {
+function AuthLayout ({ children }: { children: ReactNode }) {
     return (
         <main className={"w-full min-h-svh relative flex justify-center items-center bg-white overflow-hidden"}>
 
@@ -10,9 +10,26 @@ export default function AuthLayout ({ children }: { children: ReactNode }) {
             <div className={"absolute top-[50vh] -right-[40vh] w-[80vh] h-[80vh] rounded-full bg-gradient-to-r to-[#4A58F9] from-[#8BEAFE] shadow-md"} />
 
             {/* Passed the Children props */}
-            <div className="absolute w-full h-full">{ children }</div>
+            <div className="absolute w-full h-full flex justify-center md:justify-between items-center max-w-7xl">{ children }</div>
 
         </main>
     )
-
 }
+
+AuthLayout.Left = function ({ children, className = '' }: { children: ReactNode, className?: string }) {
+    return (
+        <div className={`${className} hidden md:block`}>
+            { children }
+        </div>
+    )
+}
+
+AuthLayout.Right = function ({ children, className = '' }: { children: ReactNode, className?: string }) {
+    return (
+        <div className={`${className}`}>
+            { children }
+        </div>
+    )
+}
+
+export default AuthLayout;
