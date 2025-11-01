@@ -1,6 +1,7 @@
 import AuthLayout from "../../layout/AuthLayout.tsx";
 import ImageWithSkeleton from "@/components/ui/ImageWIthSkeleton.tsx";
 import SignInImage from "/auth/signin.svg";
+import GoogleImage from "/auth/google.png";
 import {
     Card,
     CardContent,
@@ -108,6 +109,11 @@ export default function SignInPage() {
                             </Button>
                             <div className="p-[1px] rounded-full w-full bg-gradient-to-r from-[#4A58F9] to-[#8BEAFE]">
                                 <Button variant="outline" className="w-full rounded-full py-5 cursor-pointer">
+                                    <div className={"w-[20px] h-[20px]"}>
+                                        <ImageWithSkeleton
+                                            src={GoogleImage}
+                                        />
+                                    </div>
                                     Login with Google
                                 </Button>
                             </div>
