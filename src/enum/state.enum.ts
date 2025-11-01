@@ -1,5 +1,5 @@
 
-export enum REDUX_STATE_NAME {
-    AUTH = 'auth',
-    USER = 'user',
-}
+export const REDUX_STATE_NAME = {
+    AUTH: 'auth',
+    USER: 'user',
+} as const;
