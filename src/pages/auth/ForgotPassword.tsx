@@ -12,13 +12,14 @@ import {Button} from "@/components/ui/button.tsx";
 import {Label} from "@/components/ui/label.tsx";
 import {Input} from "@/components/ui/input.tsx";
 import { useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {ArrowLeft, Key} from "lucide-react";
 
 export default function ForgotPasswordPage() {
     const [email, setEmail] = useState<string>("");
+    const navigate = useNavigate();
 
-    const handleSubmit = async () => {}
+    const handleSubmit = async () => navigate("/verify-email");
 
     return (
         <AuthLayout>
