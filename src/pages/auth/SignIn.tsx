@@ -21,6 +21,9 @@ export default function SignInPage() {
     const [password, setPassword] = useState<string>("");
     const [isPasswordOn, setIsPasswordOn] = useState<boolean>(false);
 
+    const signIn = async () => {}
+    const googleAuth = async () => {}
+
     return (
         <AuthLayout>
             <AuthLayout.Left className={"w-full h-full flex items-center"} >
@@ -104,11 +107,11 @@ export default function SignInPage() {
                             </form>
                         </CardContent>
                         <CardFooter className="flex-col gap-2">
-                            <Button type="submit" className="w-full rounded-full py-5 bg-linear-to-l from-[#0170DA] to-[#002282] cursor-pointer">
+                            <Button onClick={() => signIn()} type="submit" className="w-full rounded-full py-5 bg-linear-to-l from-[#0170DA] to-[#002282] cursor-pointer">
                                 Sign In
                             </Button>
                             <div className="p-[1px] rounded-full w-full bg-gradient-to-r from-[#4A58F9] to-[#8BEAFE]">
-                                <Button variant="outline" className="w-full rounded-full py-5 cursor-pointer">
+                                <Button onClick={() => googleAuth()} variant="outline" className="w-full rounded-full py-5 cursor-pointer">
                                     <div className={"w-[20px] h-[20px]"}>
                                         <ImageWithSkeleton
                                             src={GoogleImage}
