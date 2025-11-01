@@ -10,7 +10,7 @@ function AuthLayout ({ children }: { children: ReactNode }) {
             <div className={"absolute top-[50vh] -right-[40vh] w-[80vh] h-[80vh] rounded-full bg-gradient-to-r to-[#4A58F9] from-[#8BEAFE] shadow-md"} />
 
             {/* Passed the Children props */}
-            <div className="absolute w-full h-full flex justify-center md:justify-between items-center max-w-7xl">{ children }</div>
+            <div className="absolute w-full h-full flex justify-center md:justify-between items-center max-w-7xl md:max-w-full">{ children }</div>
 
         </main>
     )
